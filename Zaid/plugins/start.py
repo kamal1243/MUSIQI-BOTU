@@ -3,15 +3,15 @@ from Config import Config
 from telethon import events, Button
 
 PM_START_TEXT = """
-ʜᴇʏᴀ! {}
+SALAM! {}
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-✘ **ɪ'ᴍ ᴀ ꜱɪᴍᴘʟᴇ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜꜱɪᴄ ᴀɴᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ**.
-‣ **ɪ ᴄᴀɴ ᴘʟᴀʏ ꜱᴏɴɢꜱ ɪɴ ʏᴏᴜʀ ᴠᴏɪᴄᴇ**.
-‣ **ɪ ʜᴀᴠᴇ ᴀʟᴍᴏꜱᴛ ᴀʟʟ ꜰᴇᴀᴛᴜʀᴇꜱ ᴡʜɪᴄʜ ɴᴇᴇᴅꜱ ᴀ ᴍᴜꜱɪᴄ ʙᴏᴛ**
-‣ **ᴛʜɪꜱ ʙᴏᴛ ʙᴀꜱᴇᴅ ᴏɴ ᴛᴇʟᴇᴛʜᴏɴ. ꜱᴏ ɪᴛ'ꜱ ᴘʀᴏᴠɪᴅᴇ ᴍᴏʀᴇ ꜱᴛᴀʙɪʟɪᴛʏ ꜰʀᴏᴍ ᴏᴛʜᴇʀ ʙᴏᴛꜱ**!
-‣ **ɪ ᴄᴀɴ ᴅᴏ ᴏᴛʜᴇʀ ᴛʜɪɴɢꜱ ʟɪᴋᴇ ᴘɪɴꜱ ᴇᴛᴄꜱ**.
+✘ **MƏN TELEGRAM ÜÇÜN YARADILMIŞ MUSİQİ BOTUYAM**.
+‣ **MƏN SƏNİN QRUPUNDA MAHNI OXUMAQ İSTƏYİRƏM**.
+‣ **MƏN SÜRƏTLİ VƏ DONMASI OLMUYAN BOTAM**
+‣ **MƏNİ YARADAN TEZ-TEZ YENİLİKLƏR EDİR**!
+‣ **NƏNİMLƏ BİRLİKDƏ OLDUĞUN ZAMAN MAHNINI MP3 KİMİ YÜKLƏYƏ BİLƏRSƏN**.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-✘ **ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ 🔘 ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ℹ️**.
+✘ **KÖMƏK BUTONUNA BAS 🔘 ƏLAVƏ MƏLUMAT ÜÇÜN ℹ️**.
 """
 
 @Zaid.on(events.NewMessage(pattern="^[?!/]start$"))
@@ -23,10 +23,10 @@ async def start(event):
              Config.START_IMG,
              caption=PM_START_TEXT.format(event.sender.first_name), 
              buttons=[
-        [Button.url("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ", f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-        [Button.url("👨‍💻 ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", "https://github.com/ITZ-ZAID/Telethon-Music")],
-        [Button.url("🗣️ ꜱᴜᴘᴘᴏʀᴛ", f"https://t.me/{Config.SUPPORT}"), Button.url("📣 ᴜᴘᴅᴀᴛᴇꜱ", f"https://t.me/{Config.CHANNEL}")],
-        [Button.inline("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ", data="help")]])
+        [Button.url("➕ QURUPA ƏLAVƏ ET", f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+        [Button.url("👨‍💻 DEVELOPER", "https://www.t.me/RafaelGray_DARKWEB")],
+        [Button.url("🗣️ DƏSTƏK", f"https://t.me/{Config.SUPPORT}"), Button.url("📣 GÜNCƏLLƏMƏ", f"https://t.me/{Config.CHANNEL}")],
+        [Button.inline("ƏLAVƏ MƏLUMAT ÜÇÜN", data="help")]])
        return
 
     if event.is_group:
@@ -41,8 +41,8 @@ async def _(event):
         return
     if event.is_private:
        await event.edit(PM_START_TEXT.format(event.sender.first_name), buttons=[
-        [Button.url("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ", f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-        [Button.url("👨‍💻 ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", "https://github.com/ITZ-ZAID/Telethon-Music")],
-        [Button.url("🗣️ ꜱᴜᴘᴘᴏʀᴛ", f"https://t.me/{Config.SUPPORT}"), Button.url("📣 ᴜᴘᴅᴀᴛᴇꜱ", f"https://t.me/{Config.CHANNEL}")],
-        [Button.inline("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ", data="help")]])
+        [Button.url("➕ QURUPA ƏLAVƏ ET", f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+        [Button.url("👨‍💻 DEVELOPER", "https://www.t.me/RafaelGray_DARKWEB")],
+        [Button.url("🗣️ DƏSTƏK", f"https://t.me/{Config.SUPPORT}"), Button.url("📣 GÜNCƏLLƏMƏ", f"https://t.me/{Config.CHANNEL}")],
+        [Button.inline("ƏLAVƏ MƏLUMAT ÜÇÜN", data="help")]])
        return
