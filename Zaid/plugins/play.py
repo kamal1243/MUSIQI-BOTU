@@ -128,8 +128,8 @@ async def _(event):
      await event.delete()
 
 btnn =[
-    [Button.url("sᴜᴘᴘᴏʀᴛ ⚙️", url=f"t.me/{Config.SUPPORT}"), Button.url("cʜᴀɴɴᴇʟ 🇮🇳", url=f"t.me/{Config.CHANNEL}")],
-    [Button.inline("cʟᴏꜱᴇ 🗑️", data="cls")]]
+    [Button.url("DESTEK ⚙️", url=f"t.me/{Config.SUPPORT}"), Button.url("KANAL az", url=f"t.me/{Config.CHANNEL}")],
+    [Button.inline("BAGLA 🗑️", data="cls")]]
 
 
 #play
@@ -177,7 +177,7 @@ async def play(event):
                 await botman.edit(f"`{ytlink}`")
             elif chat_id in QUEUE:
                 pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                caption = f"⌛ **Added to Queue at** #{pos}\n\n💡 **Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n👥 **Requested By:** {from_user}"
+                caption = f"⌛ **XOS DİNLEMELER** #{pos}\n\n💡 **MAHNİ ADİ:** [{songname}]({url})\n**⏰ ZAMAN:** `{duration}`\n👥 **SİFARİS EDEN:** {from_user}"
                 await botman.delete()
                 await event.client.send_file(chat_id, thumb, caption=caption, buttons=btnn)
             else:
@@ -190,7 +190,7 @@ async def play(event):
                         stream_type=StreamType().pulse_stream,
                     )
                     add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                    caption = f"📡 **Started Streaming** 💡\n\n💡 **Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n👥 **Requested By:** {from_user}"
+                    caption = f"📡 **XOS DİNLEMELER** 💡\n\n💡 **MAHNİ ADİ:** [{songname}]({url})\n**⏰ ZAMAN:** `{duration}`\n👥 **SİFARİS EDEN:** {from_user}"
                     await botman.delete()
                     await event.client.send_file(chat_id, thumb, caption=caption, buttons=btnn)
                 except Exception as ep:
@@ -207,7 +207,7 @@ async def play(event):
             songname = "Voice Note"
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            caption = f"⌛ **Added to Queue at** #{pos}\n\n**💡 Title:** [{songname}]({link})\n👥 **Requested By:** {from_user}"
+            caption = f"⌛ **XOS DİNLEMELER** #{pos}\n\n**💡 MAHNİ ADİ:** [{songname}]({link})\n👥 **SİFARİS EDEN:** {from_user}"
             await event.client.send_file(chat_id, ngantri, caption=caption, buttons=btnn)
             await botman.delete()
         else:
@@ -220,7 +220,7 @@ async def play(event):
                     stream_type=StreamType().pulse_stream,
                 )
                 add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-                caption = f"📡 **Started Streaming** 💡\n\n💡 **Title:** [{songname}]({link})\n👥 **Requested By:** {from_user}"
+                caption = f"📡 **XOS DİNLEMELER** 💡\n\n💡 **MAHNİ ADİ:** [{songname}]({link})\n👥 **SİFARİS EDEN:** {from_user}"
                 await event.client.send_file(chat_id, fotoplay, caption=caption, buttons=btnn)
                 await botman.delete()
             except Exception as ep:
@@ -240,11 +240,11 @@ async def vc_end(event, perm):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await event.reply("**Streaming Ended**")
+            await event.reply("**MAHNİ DURDURULDU**")
         except Exception as e:
             await event.reply(f"**ERROR:** `{e}`")
     else:
-        await event.reply("**Ntg is Streaming**")
+        await event.reply("**AXDARDİGİNİZ TAPİLMADİ**")
 
 
 
@@ -275,7 +275,7 @@ async def vplay(event):
     ):
         return await event.client.send_file(chat_id, Config.CMD_IMG, caption="**Give Me Your Query Which You want to Stream**\n\n **Example**: `/vplay Nira Ishq Bass boosted`", buttons=btnn)
     if replied and not replied.video and not replied.document:
-        xnxx = await event.reply("**🔄 Processing Query... Please Wait!**")
+        xnxx = await event.reply("**🔄 SİFARİS AXDARİLİR... ZEHMET OLMASA GOZLEYİN!**")
         query = event.text.split(maxsplit=1)[1]
         search = ytsearch(query)
         RESOLUSI = 720
@@ -302,7 +302,7 @@ async def vplay(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(
                     chat_id, songname, ytlink, url, "Video", RESOLUSI)
-                caption = f"**⌛ Added to Queue at** #{pos}\n\n**💡 Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n👥 **Requested By:** {from_user}"
+                caption = f"**⌛ XOS DİNLEMELER** #{pos}\n\n**💡 MAHNİ ADİ:** [{songname}]({url})\n**⏰ ZAMAN:** `{duration}`\n👥 **SİFARİS EDEN:** {from_user}"
                 await xnxx.delete()
                 await event.client.send_file(chat_id, thumb, caption=caption, buttons=btnn)
             else:
@@ -321,7 +321,7 @@ async def vplay(event):
                         RESOLUSI)
                     await xnxx.delete()
                     await event.client.send_file(event.chat_id,
-                        f"**📡 Started Streaming 💡**\n\n💡 **Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n👥 **Requested By:** {from_user}, buttons=btnn",
+                        f"**📡 XOS DİNLEMELER 💡**\n\n💡 **MAHNİ ADİ:** [{songname}]({url})\n**⏰ ZAMAN:** `{duration}`\n👥 **SİFARİS EDEN:** {from_user}, buttons=btnn",
                         link_preview=False,
                     )
                 except Exception as ep:
@@ -341,7 +341,7 @@ async def vplay(event):
             songname = "Telegram Video Player"
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Video", RESOLUSI)
-            caption = f"**⌛ Added to Queue at** #{pos}\n\n**💡 Title:** [{songname}]({link})\n👥 **Requested By:** {from_user}"
+            caption = f"**⌛ XOS DİNLEMELER** #{pos}\n\n**💡 MAHNİ ADİ:** [{songname}]({link})\n👥 **SİFARİS EDEN:** {from_user}"
             await event.client.send_file(chat_id, ngantri, caption=caption, buttons=btnn)
             await xnxx.delete()
         else:
@@ -358,14 +358,14 @@ async def vplay(event):
                     stream_type=StreamType().pulse_stream,
                 )
                 add_to_queue(chat_id, songname, dl, link, "Video", RESOLUSI)
-                caption = f"**📡 Started Streaming 💡**\n\n💡 **Title:** [{songname}]({link})\n👥 **Requested By:** {from_user}"
+                caption = f"**📡 XOS DİNLEMELER 💡**\n\n💡 **MAHNİ ADİ:** [{songname}]({link})\n👥 **SİFARİS EDEN:** {from_user}"
                 await xnxx.delete()
                 await event.client.send_file(chat_id, fotoplay, caption=caption, buttons=btnn)
             except Exception as ep:
                 clear_queue(chat_id)
                 await xnxx.edit(f"`{ep}`")
     else:
-        xnxx = await event.reply("**🔄 Processing Query... Please Wait!**")
+        xnxx = await event.reply("**🔄 SİFARİS AXDARİLİR... ZEHMET OLMASA GOZLEYİN!**")
         query = event.text.split(maxsplit=1)[1]
         search = ytsearch(query)
         RESOLUSI = 720
@@ -388,7 +388,7 @@ async def vplay(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(
                     chat_id, songname, ytlink, url, "Video", RESOLUSI)
-                caption = f"**⌛ Added to Queue at** #{pos}\n\n💡 **Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n👥 **Requested By:** {from_user}"
+                caption = f"**⌛ XOS DİNLEMELER** #{pos}\n\n💡 **MAHNİ ADİ:** [{songname}]({url})\n**⏰ ZAMAN:** `{duration}`\n👥 **SİFARİS EDEN:** {from_user}"
                 await xnxx.delete()
                 await event.client.send_file(chat_id, thumb, caption=caption, buttons=btnn)
             else:
@@ -405,7 +405,7 @@ async def vplay(event):
                         url,
                         "Video",
                         RESOLUSI)
-                    caption = f"**📡 Started Streaming 💡**\n\n🎥 **Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n🎧 **Requested By:** {from_user}"
+                    caption = f"**📡 XOS DİNLEMELER 💡**\n\n🎥 **MAHNİ ADİ:** [{songname}]({url})\n**⏰ ZAMAN:** `{duration}`\n🎧 **SİFARİS EDEN:** {from_user}"
                     await xnxx.delete()
                     await event.client.send_file(chat_id, thumb, caption=caption, buttons=btnn)
                 except Exception as ep:
@@ -475,7 +475,7 @@ async def vc_skip(event, perm):
             await event.reply("empty queue, leave voice chat", 10)
         else:
             await event.reply(
-                f"**⏭ Skipped**\n**🎧 Now Playing** - [{op[0]}]({op[1]})",
+                f"**⏭ NOVBETİYE KECDİ**\n**🎧 XOS DİNLEMELER** - [{op[0]}]({op[1]})",
                 link_preview=False,
             )
     else:
@@ -499,11 +499,11 @@ async def vc_pause(event, perm):
     if chat_id in QUEUE:
         try:
             await call_py.pause_stream(chat_id)
-            await event.reply("**Streaming Paused**")
+            await event.reply("**MAHNİ DURDURULDU**")
         except Exception as e:
             await event.reply(f"**ERROR:** `{e}`")
     else:
-        await event.reply("**Nothing Is Playing**")
+        await event.reply("**NESE PROBLEM VAR**")
 
 
 
@@ -514,11 +514,11 @@ async def vc_resume(event, perm):
     if chat_id in QUEUE:
         try:
             await call_py.resume_stream(chat_id)
-            await event.reply("**Streaming Started Back 🔙**")
+            await event.reply("**MAHNİ DAVAM EDİR 🔙**")
         except Exception as e:
             await event.reply(f"**ERROR:** `{e}`")
     else:
-        await event.reply("**Nothing Is Streaming**")
+        await event.reply("**NESE PROBLEM VAR**")
 
 
 @call_py.on_stream_end()
