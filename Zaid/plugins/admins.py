@@ -19,19 +19,19 @@ async def _(event):
 
 
 ADMIN_TEXT = """
-**✘ A module from which admins of the chat can use!**
+**✘ Yalnız admin kodları!**
 
-‣ `?end` - To End music streaming.
-‣ `?skip` - To Skip Tracks Going on.
-‣ `?pause` - To Pause streaming.
-‣ `?resume` - to Resume Streaming.
-‣ `?leavevc` - force The Userbot to leave Vc Chat (Sometimes Joined).
-‣ `?playlist` - to check playlists.
+‣ `?end` - Mahnını durdurur.
+‣ `?skip` - Növbəti mahnıya eçir.
+‣ `?pause` - Mahnını dondurur.
+‣ `?resume` - Mahnıya dabam edir.
+‣ `?leavevc` - Bot səsdən cıxır.
+‣ `?playlist` - Güzləmədə olan mahnılar.
 """
 
 PLAY_TEXT = """
-**✘ A module from which users of the chat can use!**
+**✘ User kodları!**
 
-‣ `?play` - To Play Audio from Else Reply to audio file.
-‣ `?vplay` - To Stream Videos (HEROKU_MODE > Doesn't support).
+‣ `?play` - Mahnını qoşmaq üçün.
+‣ `?vplay` - Mahnını mp3 yükləmək üçün.
 """
