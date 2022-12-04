@@ -153,7 +153,7 @@ async def play(event):
     ):
         return await event.client.send_file(chat_id, Config.CMD_IMG, caption="**Give Me Your Query Which You want to Play**\n\n **Example**: `/play Nira Ishq Bass boosted`", buttons=btnn)
     elif replied and not replied.audio and not replied.voice or not replied:
-        botman = await event.reply("**🔄 Processing Query... Please Wait!**")
+        botman = await event.reply("**🔄 SİFARİŞ AXDARILIR... ZƏHMƏT OLMASA GOZLƏYİN!**")
         query = event.text.split(maxsplit=1)[1]
         search = ytsearch(query)
         if search == 0:
