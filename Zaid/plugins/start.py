@@ -12,6 +12,9 @@ SALAM! {}
 ‣ **NƏNİMLƏ BİRLİKDƏ OLDUĞUN ZAMAN MAHNINI MP3 KİMİ YÜKLƏYƏ BİLƏRSƏN**.
 ‣ **ƏGƏR MAHNI OXUMURAMSA @GROOTMUSIC_BOT  USERIN QURUPA ƏLAVƏ EDİN**!
 ‣ **REKLAM VƏ İŞ BİRLİYİ ÜÇÜN @RafaelGray_DARKWEB - LƏ ƏLAQƏ YARADIN**!
+
+‣ **BU BOT SƏNƏ ÖZƏLDİ @medisdida **.
+
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 ✘ **KÖMƏK BUTONUNA BAS 🔘 ƏLAVƏ MƏLUMAT ÜÇÜN ℹ️**.
 """
