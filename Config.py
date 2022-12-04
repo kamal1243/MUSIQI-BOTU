@@ -12,6 +12,6 @@ class Config(object):
     CHANNEL = os.environ.get("CHANNEL", "GROOTSERVICEMUSIC") # Your Channel
     START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/7af0ede8d54ad0b4610fd.jpg")
     CMD_IMG = os.environ.get("CMD_IMG", "https://telegra.ph/file/e15386aa5dd916356c806.jpg")
-    ASSISTANT_ID = int(os.environ.get("ASSISTANT_ID", "1025013122")) # telegram I'd not Username
+    ASSISTANT_ID = int(os.environ.get("ASSISTANT_ID", "5532563304")) # telegram I'd not Username
     AUTO_LEAVE_TIME = int(os.environ.get("AUTO_LEAVE_ASSISTANT_TIME", "54000")) # in seconds
     AUTO_LEAVE = os.environ.get('AUTO_LEAVING_ASSISTANT', None) # Change it to "True"
